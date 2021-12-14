@@ -1,0 +1,13 @@
+name: demo_actions
+on:
+  workflow_dispatch:
+jobs:
+  beforeinstall:
+    runs-on: ['self-hosted','Linux','X64','react']
+    steps:
+      - name: repository pull
+        run: git pull origin master
+      - name: npm install
+        run: npm install
+      - name: start the app
+        run: npm start
