@@ -63,7 +63,7 @@ export default class imageCompressor extends React.Component {
     return (
       <div className="m-5">
         <div className="text-light text-center">
-          <marque>hello</marque>
+          <marquee>hello</marquee>
           <h1> Hello World </h1>
           <h1>Three Simple Steps</h1>
           <h3>1. Upload Image</h3>
