@@ -1,4 +1,4 @@
-name: Deploy on Amazon ECS without TASKDEF Create
+name: Deploy on Amazon ECS without image change in taskdef
 on:
   workflow_dispatch:
 
@@ -44,7 +44,7 @@ jobs:
       - name: Deploy Amazon ECS task definition
         uses: aws-actions/amazon-ecs-deploy-task-definition@de0132cf8cdedb79975c6d42b77eb7ea193cf28e
         with:
-          task-definition: ImageCompressor:1
+          task-definition: ${{ env.ECS_TASK_DEFINITION }}
           service: ${{ env.ECS_SERVICE }}
           cluster: ${{ env.ECS_CLUSTER }}
           wait-for-service-stability: true
