@@ -3,4 +3,4 @@ workdir app/
 RUN apt update && apt upgrade -y
 COPY . .
 RUN npm install
-CMD ['npm','start']
+CMD ["npm","start"]
